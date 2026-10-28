@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+</head>
+<body>
+
+<h2>Add Expense</h2>
+
+<form method="POST">
+
+    <label>Amount</label><br>
+    <input type="number" step="0.01" name="amount" required><br><br>
+
+    <label>Category</label><br>
+    <select name="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Bills</option>
+        <option>Medical</option>
+        <option>Other</option>
+    </select><br><br>
+
+    <label>Description</label><br>
+    <input type="text" name="description"><br><br>
+
+    <label>Date</label><br>
+    <input type="date" name="date" required><br><br>
+
+    <button type="submit">Add Expense</button>
+
+</form>
+<hr>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-secondary">
+    Back to Dashboard
+</a>
+
+<a href="{{ url_for('view_expenses') }}" class="btn btn-success">
+    View Expenses
+</a>
+
+</body>
+</html>
